@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="512"
+   height="512"
+   viewBox="0 0 135.46666 135.46667"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
+   sodipodi:docname="logo_dark.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#4a4a4a"
+     bordercolor="#000000"
+     borderopacity="0.54901961"
+     inkscape:showpageshadow="false"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="true"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     showborder="true"
+     inkscape:zoom="1.6816406"
+     inkscape:cx="256"
+     inkscape:cy="256"
+     inkscape:window-width="1920"
+     inkscape:window-height="1052"
+     inkscape:window-x="1440"
+     inkscape:window-y="28"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:none;stroke:#d0d0d0;stroke-width:8.46407;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       id="rect46"
+       width="104.51302"
+       height="104.51301"
+       x="5.3257036"
+       y="8.450614"
+       ry="24.094059"
+       rx="0" />
+    <rect
+       style="fill:none;stroke:#999999;stroke-width:8.46406;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       id="rect46-7"
+       width="104.51302"
+       height="104.51302"
+       x="23.803511"
+       y="27.088524"
+       ry="24.094063"
+       rx="0" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;white-space:pre;inline-size:24.8702;display:inline;fill:#c6438b;fill-opacity:0.99811673;stroke-width:0.26461115;stroke-dasharray:none"
+       x="43.267517"
+       y="56.011768"
+       id="text1"
+       transform="matrix(12.748585,0,0,13.598093,-524.87755,-671.00356)"><tspan
+         x="43.267517"
+         y="56.011768"
+         id="tspan2">clone</tspan></text>
+  </g>
+</svg>
