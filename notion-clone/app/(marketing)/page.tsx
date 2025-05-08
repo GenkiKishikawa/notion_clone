@@ -1,6 +1,7 @@
 import React from "react";
 import { Heading } from "./_components/heading";
 import { Heroes } from "./_components/heroes";
+import { Footer } from "./_components/footer";
 
 const MarketingPage = () => {
   return (
@@ -9,6 +10,7 @@ const MarketingPage = () => {
         <Heading />
         <Heroes />
       </div>
+      <Footer />
     </div>
   );
 };
