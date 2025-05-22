@@ -1,0 +1,16 @@
+{
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/src",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "GitHub.copilot",
+        "ritwickdey.LiveServer",
+        "bradlc.vscode-tailwindcss",
+        "Trunk.io",
+        "burkeholland.simple-react-snippets"
+      ]
+    }
+  },
+}
