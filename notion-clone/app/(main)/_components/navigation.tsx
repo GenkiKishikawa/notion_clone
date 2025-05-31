@@ -18,6 +18,7 @@ import { api } from "@/convex/_generated/api";
 
 import { UserItem } from "./user-item";
 import { Item } from "./item";
+import { DocumentList } from "./document-list";
 
 export const Navigation = () => {
   const pathname = usePathname();
