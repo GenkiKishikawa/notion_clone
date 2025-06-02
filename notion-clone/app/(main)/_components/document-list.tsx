@@ -32,11 +32,11 @@ export const DocumentList = ({
   };
 
   const documents = useQuery(api.documents.getSidebar, {
-    parentDocument: parentDocumentId
+    parentDocument: parentDocumentId,
   });
 
   const onRedirect = (documentId: string) => {
-    router.push('/documents/${documentId}');
+    router.push(`/documents/${documentId}`);
   };
 
   if (documents === undefined) {
@@ -50,19 +50,19 @@ export const DocumentList = ({
           </>
         )}
       </>
-    )
+    );
   }
 
   return (
     <>
       <p
         style={{
-          paddingLeft: level ? `${(level * 12) + 25}px` : undefined,
+          paddingLeft: level ? `${level * 12 + 25}px` : undefined,
         }}
         className={cn(
           "hidden text-sm font-medium text-muted-foreground/80",
           expanded && "last:block",
-          level === 0 && "hidden"
+          level === 0 && "hidden",
         )}
       >
         No pages inside
@@ -81,10 +81,7 @@ export const DocumentList = ({
             expanded={expanded[document._id]}
           />
           {expanded[document._id] && (
-            <DocumentList
-              parentDocumentId={document._id}
-              level={level + 1}
-            />
+            <DocumentList parentDocumentId={document._id} level={level + 1} />
           )}
         </div>
       ))}
