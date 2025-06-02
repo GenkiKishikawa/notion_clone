@@ -131,15 +131,13 @@ export const getTrash = query({
     const documents = await ctx.db
       .query("documents")
       .withIndex("by_user", (q) => q.eq("userId", userId))
-      .filter((q) =>
-        q.eq(q.field("isArchived"), true),
-      )
+      .filter((q) => q.eq(q.field("isArchived"), true))
       .order("desc")
       .collect();
 
-    return documents
-  }
-})
+    return documents;
+  },
+});
 
 export const restore = mutation({
   args: { id: v.id("documents") },
@@ -165,21 +163,19 @@ export const restore = mutation({
     const recursiveRestore = async (documentId: Id<"documents">) => {
       const children = await ctx.db
         .query("documents")
-        .withIndex("by_user_parent", (q) => (
-          q
-            .eq("userId", userId)
-            .eq("parentDocument", documentId)
-        ))
+        .withIndex("by_user_parent", (q) =>
+          q.eq("userId", userId).eq("parentDocument", documentId),
+        )
         .collect();
-      
+
       for (const child of children) {
         await ctx.db.patch(child._id, {
           isArchived: false,
-        })
+        });
 
         await recursiveRestore(child._id);
       }
-    }
+    };
 
     const options: Partial<Doc<"documents">> = {
       isArchived: false,
@@ -197,7 +193,7 @@ export const restore = mutation({
     recursiveRestore(args.id);
 
     return document;
-  }
+  },
 });
 
 export const remove = mutation({
@@ -224,5 +220,26 @@ export const remove = mutation({
     const document = await ctx.db.delete(args.id);
 
     return document;
-  }
+  },
+});
+
+export const getSearch = query({
+  handler: async (ctx) => {
+    const identity = await ctx.auth.getUserIdentity();
+
+    if (!identity) {
+      throw new Error("Not authenticated");
+    }
+
+    const userId = identity.subject;
+
+    const documents = await ctx.db
+      .query("documents")
+      .withIndex("by_user", (q) => q.eq("userId", userId))
+      .filter((q) => q.eq(q.field("isArchived"), false))
+      .order("desc")
+      .collect();
+
+    return documents;
+  },
 });

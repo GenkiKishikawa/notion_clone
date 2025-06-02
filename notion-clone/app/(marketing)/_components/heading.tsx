@@ -5,7 +5,7 @@ import { useConvexAuth } from "convex/react";
 import { ArrowRight } from "lucide-react";
 import { SignInButton } from "@clerk/clerk-react";
 import Link from "next/link";
-import { Spinner } from "@/components/ui/spinner";
+import { Spinner } from "@/components/spinner";
 
 export const Heading = () => {
   const { isAuthenticated, isLoading } = useConvexAuth();
