@@ -7,6 +7,7 @@ import { Doc } from "@/convex/_generated/dataModel";
 import { api } from "@/convex/_generated/api";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { Skeleton } from "@/components/ui/skeleton";
 
 interface TitleProps {
   initialData: Doc<"documents">;
@@ -36,7 +37,7 @@ export const Title = ({ initialData }: TitleProps) => {
     setTitle(event.target.value);
     update({
       id: initialData._id,
-      title: event.target.value || "Untitled",
+      title: event.target.value,
     });
   };
 
@@ -71,4 +72,8 @@ export const Title = ({ initialData }: TitleProps) => {
       )}
     </div>
   );
+};
+
+Title.Skeleton = function TitleSkeleton() {
+  return <Skeleton className="h-9 w-20 rounded-md" />;
 };
