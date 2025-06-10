@@ -10,7 +10,6 @@ import { SingleImageDropzone } from "@/components/single-image-dropzone";
 import { useEdgeStore } from "@/lib/edgestore";
 import { api } from "@/convex/_generated/api";
 import type { Id } from "@/convex/_generated/dataModel";
-import { on } from "events";
 
 export const CoverImageModal = () => {
   const params = useParams();
@@ -34,6 +33,9 @@ export const CoverImageModal = () => {
 
       const res = await edgestore.publicFiles.upload({
         file,
+        options: {
+          replaceTargetUrl: coverImage.url,
+        },
       });
 
       await update({
