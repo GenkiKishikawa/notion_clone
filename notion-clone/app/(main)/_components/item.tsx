@@ -25,7 +25,6 @@ import {
   DropdownMenuSeparator,
 } from "@/components/ui/dropdown-menu";
 import React from "react";
-import { TurborepoAccessTraceResult } from "next/dist/build/turborepo-access-trace";
 
 interface ItemProps {
   id?: Id<"documents">;
