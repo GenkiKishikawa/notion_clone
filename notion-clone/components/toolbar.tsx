@@ -1,6 +1,6 @@
 "use client";
 
-import { ElementRef, use, useRef, useState } from "react";
+import { ElementRef, useRef, useState } from "react";
 import { useMutation } from "convex/react";
 import { X, Smile, ImageIcon } from "lucide-react";
 import TextareaAutosize from "react-textarea-autosize";

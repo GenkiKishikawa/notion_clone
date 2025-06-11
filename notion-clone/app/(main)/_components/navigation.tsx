@@ -10,7 +10,7 @@ import {
   Trash,
 } from "lucide-react";
 import { useParams, usePathname, useRouter } from "next/navigation";
-import React, { ElementRef, use, useRef, useState, useEffect } from "react";
+import React, { ElementRef, useRef, useState, useEffect } from "react";
 import { useMediaQuery } from "usehooks-ts";
 import { useMutation } from "convex/react";
 import { toast } from "sonner";
